@@ -12,59 +12,51 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div className="container">
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <div className="navbar-nav mr-auto">
-        </div>
-        <form className="form-inline my-2 my-lg-0" onSubmit={this.handleSubmit} _lpchecked="1">
-          <input className="form-control mr-sm-2" type="text" required placeholder="Zip Code" aria-label="Zip Code"
-            value={this.state.value} onChange={this.handleChange} onFocus={this.handleDisplay} />
-          <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  <div class="custom-container">
+    <div class="d-flex justify-content-between bg-light">
+      <div class="ml-2">
+      </div>
+      <div class="ml-2">
+        <form class="m-2 d-flex align-items-center">
+          <input class="form-control mr-2" type="text" required placeholder="Zip Code" />
+          <button class="btn btn-outline-success my-2" type="submit">Search</button>
         </form>
       </div>
-    </nav>
-    <div>
-      <li className="list-group-item d-flex justify-content-between py-4 grey" key={index}>
-        <div className="city" onClick={()=> this.resetState(item.zip)}>
-          {item.city}
+    </div>
+    <div class="m-3 mx-lg-0">
+      <li class="list-group-item d-flex justify-content-between py-4 grey" key={index}>
+        <div class="city">
+          Los Angeles
         </div>
-        <button type="button" className="btn btn-default" onClick={()=> this.removeZip(item.zip)}>X</button>
+        <button type="button" class="btn btn-default">X</button>
       </li>
     </div>
-    <div>
-      <div className="card mt-3">
-        <div className="card mt-0">
-          <div className="card-body mt-0">
-            <h4 className="card-title grey">
-              {name}
-            </h4>
-            <div className="row">
-              <div className="col-sm-4">
-                <h1 className="grey">{`${temperature}°`}</h1>
-                <h6 className="grey">{desc}</h6>
-              </div>
-              <div className="col-sm-4 col-5">
+    <div class="m-3 mx-lg-0">
+      <div class="card mt-0">
+        <div class="card-body mt-0">
+          <h4 class="card-title grey">
+            Los Angeles
+          </h4>
+          <div class="row mb-3">
+            <div class="col-sm-4">
+              <h1 class="grey">60°</h1>
+              <h6 class="grey">Sunny</h6>
+            </div>
+            <div class="col-sm-4 col-5 mb-3">
 
-              </div>
-              <div className="col-sm-4">
-                <h5 className="grey">{`Precipitation ${rainfall}%`}</h5>
-                <h5 className="grey">{`Humidity ${main.humidity}%`}</h5>
-                <h5 className="grey">{`Wind ${windSpeed} mph`}</h5>
-                <div className="row">
-                  <div className="col-sm-4"></div>
-                  <div className="col-sm-4 col-5"></div>
-                  <div className="col-sm-4"></div>
-                </div>
+            </div>
+            <div class="col-sm-4">
+              <h5 class="grey">Precipitation 0%</h5>
+              <h5 class="grey">Humidity 20%</h5>
+              <h5 class="grey">Wind 6 mph</h5>
+              <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4 col-5"></div>
+                <div class="col-sm-4"></div>
               </div>
             </div>
-            <button className="btn btn-primary" onClick={()=> this.addFavorite(this.state.zip, name)}>Add to
-              favorites</button>
           </div>
+          <button class="btn btn-primary" >Add to favorites</button>
         </div>
       </div>
     </div>

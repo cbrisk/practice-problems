@@ -4,7 +4,14 @@
 .city:hover {
   cursor: pointer;
 }
-
+.custom-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
 .grey {
   color: lightslategray;
+}
+
+.lt-grey {
+  background-color: #ececec;
 }
