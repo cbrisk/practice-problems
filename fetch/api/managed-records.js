@@ -69,4 +69,13 @@ async function getData(url) {
   }
 }
 
+// For some reason when I was running the tests, they were not passing properly
+// However, when I ran them on my own, the passed with test code below
+//
+// retrieve({ page: 1, colors: ['red', 'blue'] })
+//   .then(result => {
+//     console.log(result);
+//   })
+
+
 export default retrieve;
